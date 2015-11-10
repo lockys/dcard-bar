@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>迪卡今日卡快速看</title>
+  <link rel="stylesheet" href="../dist/css/photon.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <style>
+  .list-group{
+    float: left;
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 3px;
+  }
+  .image, .img-holder{
+    float:left;
+    max-width:300px;
+    border: 1px solid #eee;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 3px;
+  }
+  .background-darker {
+    background-color: #eee;
+  }
+  .content-hidden {
+    display: none;
+  }
+
+  .login-box{
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 320px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+  }
+  .lb-header{
+    position:relative;
+    color: #00415d;
+    margin: 5px 5px 10px 5px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #eee;
+    text-align:center;
+    height:28px;
+  }
+  .lb-header a{
+    margin: 0 25px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    font-size: 15px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+  }
+  .lb-header .active{
+    color: #029f5b;
+    font-size: 18px;
+  }
+
+  .email-login,.email-signup{
+    position:relative;
+    float: left;
+    width: 100%;
+    height:auto;
+    margin-top: 20px;
+    text-align:center;
+  }
+  .u-form-group{
+    text-align: center;
+    width:100%;
+    margin-bottom: 10px;
+  }
+  .u-form-group input[type="email"],
+  .u-form-group input[type="password"]{
+    width: calc(50% - 22px);
+    height:45px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: #333;
+    font-size:0.8rem;
+    -webkit-transition:all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    transition:all 0.1s linear;
+  }
+  .u-form-group input:focus{
+    border-color: #358efb;
+  }
+  .u-form-group button{
+    display: inline;
+    background-color: #1CB94E;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <header class="toolbar toolbar-header">
+      <h1 class="title">您今天抽到的是...</h1>
+    </header>
+
+    <section>
+      <img class="image" height="400">
+      <div style="width: 290px; height: 400px; background-color:#eee;" class="img-holder"></div>
+    </img>
+    <ul class="list-group">
+      <li class="list-group-item background-darker">
+        <strong>性別:</strong>
+        <div class="media-body gender">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>就讀學校:</strong>
+        <div class="media-body school">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item background-darker">
+        <strong>就讀系所:</strong>
+        <div class="media-body department">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>年級:</strong>
+        <div class="media-body grade">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item background-darker">
+        <strong>專長、興趣:</strong>
+        <div class="media-body talent">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>曾參加過的社團:</strong>
+        <div class="media-body club">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item background-darker">
+        <strong>喜歡的課:</strong>
+        <div class="media-body lecture">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>喜歡的國家:</strong>
+        <div class="media-body lovedcountry">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item background-darker">
+        <strong>自己最近的困擾:</strong>
+        <div class="media-body trouble">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <strong>可以交換學習的才藝:</strong>
+        <div class="media-body exchange">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+      <li class="list-group-item background-darker">
+        <strong>想嘗試的事情:</strong>
+        <div class="media-body wanttotry">
+          <p>為您讀取中</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <button class="dcard-open-btn btn btn-large btn-default" style="margin: 3px;">連到 Dcard</button>
+  <div class="toolbar-actions">
+    <button class="btn btn-mini btn-default" id="refresh-btn">
+      <span class="icon icon-cw"></span>
+    </button>
+    <button class="btn btn-mini btn-default pull-right" id="quit-btn">
+      <span class="icon icon-cancel-circled"></span>
+    </button>
+    <button class="btn btn-mini btn-default pull-right" id="setting-btn">
+      <span class="icon icon-cog"></span>
+    </button>
+  </div>
+
+</div>
+
+<div class="login-box content-hidden">
+  <div class="lb-header">
+    <a href="#" class="active" id="login-box-link">輸入 Dcard 帳號</a><br/>
+  </div>
+  <form class="email-login">
+
+    <div class="u-form-group">
+      <input class="email-input" type="email" placeholder="帳號"/>
+    </div>
+    <div class="u-form-group">
+      <input class="password-input" type="password" placeholder="密碼" value="sdjkdjsdkasdaasdhkj"/>
+    </div>
+    目前密碼為明碼儲存於系統內，若電腦給他人使用請注意。
+    <div class="u-form-group">
+      <button class="save-btn">儲存密碼</button>
+      <button class="clean-btn">清除密碼</button>
+      <button class="leave-btn">關閉框框</button>
+    </div>
+  </form>
+  <button class="btn btn-mini btn-default issue-btn pull-right">問題回報</button><br/>
+</div>
+<script type="text/javascript">
+window.$ = window.jQuery = require('jquery');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
