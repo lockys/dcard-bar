@@ -14,6 +14,7 @@ $ npm run build
 
 **Install dependencies**
 ```sh
+$ git clone https://github.com/lockys/dcard-card-bar.git dcard-card-bar && cd dcard-card-bar
 $ npm install
 ```
 
