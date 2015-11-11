@@ -8,6 +8,9 @@ A OS X menubar helps you check what card of Dcard you get today!
 **Notification when midnight comes in**  
 ![](./media/notifier.png)
 
+# Download
+Please refer to [`releases`](https://github.com/lockys/dcard-card-bar/releases)
+
 # Build
 
 ```sh
