@@ -11,6 +11,23 @@ var mb = menubar({
 });
 
 var path = mb.app.getPath('userData');
+var schedule = require('node-schedule');
+var notifier = require('node-notifier');
+var p = require('path');
+
+var j = schedule.scheduleJob('15 0 0 * * *', function() {
+  notifier.notify({
+    title: '午夜十二點來臨!',
+    message: '趕快點我看看你今天抽到誰!',
+    icon: p.join('http://www.iconpng.com/png/windows8_icons2/D.png'),
+    wait: true,
+  });
+});
+
+notifier.on('click', function(notifierObject, options) {
+  console.log('click!');
+  mb.showWindow();
+});
 
 mb.on('ready', function ready() {
   console.log('app is ready');
