@@ -1,4 +1,4 @@
-dcard-card-bar
+dcard-card-bar 狄卡卡霸
 ==
 A OS X menubar helps you check what card of Dcard you get today!
 ![](./media/shot.png)
@@ -6,19 +6,21 @@ A OS X menubar helps you check what card of Dcard you get today!
 # Build
 
 ```sh
-npm run build
+$ git clone https://github.com/lockys/dcard-card-bar.git dcard-card-bar && cd dcard-card-bar
+$ npm run build
 ```
 
 # Develop
 
 **Install dependencies**
 ```sh
-npm install
+$ git clone https://github.com/lockys/dcard-card-bar.git dcard-card-bar && cd dcard-card-bar
+$ npm install
 ```
 
 **Run the bar!**
 ```sh
-npm start
+$ npm start
 ```
 
 # Built with
