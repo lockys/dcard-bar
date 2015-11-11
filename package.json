@@ -1,6 +1,6 @@
 {
   "name": "dcard-card-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get today's card of Dcard today!",
   "dependencies": {
     "dcard-card": "^0.0.2",
@@ -13,7 +13,9 @@
   },
   "devDependencies": {
     "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.34.2"
+    "electron-prebuilt": "^0.34.2",
+    "grunt": "^0.4.5",
+    "grunt-electron-installer": "^1.0.10"
   },
   "main": "main.js",
   "scripts": {
