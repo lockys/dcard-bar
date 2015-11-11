@@ -17,7 +17,7 @@
   },
   "main": "main.js",
   "scripts": {
-    "build": "electron-packager . dcard-card-bar --platform=darwin --arch=x64 --version=0.34.2 --overwrite --icon=Icon.icns",
+    "build": "electron-packager . dcard-card-bar --platform=darwin --arch=x64 --version=0.34.2 --overwrite --icon=Icon.icns --ignore='node_modules/(electron-packager|electron-prebuilt)'",
     "start": "electron ."
   },
   "author": "Calvin Jeng <locky4567@gmail.com> (https://github.com/lockys)",
