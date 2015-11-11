@@ -1,7 +1,12 @@
 dcard-card-bar 狄卡卡霸
 ==
-A OS X menubar helps you check what card of Dcard you get today!
+A OS X menubar helps you check what card of Dcard you get today!  
+
+**Screenshot**  
 ![](./media/shot.png)
+
+**Notification when midnight comes in**  
+![](./media/notifier.png)
 
 # Build
 
