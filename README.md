@@ -1,6 +1,6 @@
-dcard-card-bar 狄卡卡霸
+dcard-bar 
 ==
-A OS X menubar helps you check what card of Dcard you get today!  
+A menubar helps you check what card of Dcard you get today!  
 
 **Screenshot**  
 ![](./media/shot.png)
