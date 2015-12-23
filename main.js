@@ -1,6 +1,7 @@
 var menubar = require('menubar');
 var ipc = require('ipc');
 var fs = require('fs');
+var cp = require('child_process');
 var e;
 
 var mb = menubar({
@@ -63,8 +64,49 @@ ipc.on('write-user-config', function(event, arg) {
   });
 });
 
-ipc.on('read-user-config', function(event, arg) {
-  fs.readFile(path + '/.s.json', 'utf8', function(err, s) {
-    event.sender.send('readUserData', s);
-  });
-});
+var handleSquirrelEvent = function() {
+   if (process.platform != 'win32') {
+      return false;
+   }
+
+   function executeSquirrelCommand(args, done) {
+      var updateDotExe = p.resolve(p.dirname(process.execPath), 
+         '..', 'update.exe');
+      var child = cp.spawn(updateDotExe, args, { detached: true });
+      child.on('close', function(code) {
+         done();
+      });
+   };
+
+   function install(done) {
+      var target = 'dcard.exe';
+      executeSquirrelCommand(["--createShortcut", target], done);
+   };
+
+   function uninstall(done) {
+      var target = 'dcard.exe';
+      executeSquirrelCommand(["--removeShortcut", target], done);
+   };
+
+   var squirrelEvent = process.argv[1];
+   switch (squirrelEvent) {
+      case '--squirrel-install':
+         install(mb.app.quit);
+         return true;
+      case '--squirrel-updated':
+         install(mb.app.quit);
+         return true;
+      case '--squirrel-obsolete':
+         mb.app.quit();
+         return true;
+      case '--squirrel-uninstall':
+         uninstall(mb.app.quit);
+         return true;
+   }
+
+   return false;
+};
+
+if (handleSquirrelEvent()) {
+   return;
+}
