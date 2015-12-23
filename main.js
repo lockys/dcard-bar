@@ -79,12 +79,12 @@ var handleSquirrelEvent = function() {
    };
 
    function install(done) {
-      var target = 'dcard.exe';
+      var target = p.basename(process.execPath);
       executeSquirrelCommand(["--createShortcut", target], done);
    };
 
    function uninstall(done) {
-      var target = 'dcard.exe';
+      var target = p.basename(process.execPath);
       executeSquirrelCommand(["--removeShortcut", target], done);
    };
 
