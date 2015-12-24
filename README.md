@@ -14,6 +14,10 @@ A menubar helps you check what card of Dcard you get today!
 [Window 安裝檔](https://github.com/lockys/dcard-bar/releases/download/0.0.2/dcard-bar-setup.exe)  
 [For OS X](https://github.com/lockys/dcard-bar/releases/download/0.0.2/dcard-card-bar.zip)
 
+**已知問題**  
+- PC-cillin 會檔
+- 點多下 icon 會開啟多次
+
 # 聲明
 本程式保證不收集密碼 :pray:  
 帳號密碼是用來向`https://www.dcard.tw/api/member/login`發送登入請求，絕無其他用途。
