@@ -3,10 +3,12 @@ Dcard 抽卡快速看
 A menubar helps you check what card of Dcard you get today!  
 一個小工具讓你快速看你 Dcard 今天抽到的是誰。
 
-**截圖**  
 ![](./media/shot.png)
 
-**午夜來臨，自動提醒**  
+# 功能
+- 點開程式，立即查看抽到誰
+- 提供連結至 Dcard 抽卡頁
+- 午夜來臨，自動提醒  
 ![](./media/notifier.png)
 
 # 下載
