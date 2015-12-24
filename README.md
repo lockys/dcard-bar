@@ -1,15 +1,25 @@
-dcard-bar 
+Dcard 抽卡快速看
 ==
 A menubar helps you check what card of Dcard you get today!  
+一個小工具讓你快速看你今天抽到的是誰 :)
 
-**Screenshot**  
+
+**截圖**  
 ![](./media/shot.png)
 
-**Notification when midnight comes in**  
+**午夜來臨，自動提醒**  
 ![](./media/notifier.png)
 
-# Download
-Please refer to [`releases`](https://github.com/lockys/dcard-card-bar/releases)
+# 下載
+[Window 安裝檔](https://github.com/lockys/dcard-bar/releases/download/0.0.2/dcard-bar-setup.exe)  
+[For OS X](https://github.com/lockys/dcard-bar/releases/download/0.0.2/dcard-card-bar.zip)
+
+# 聲明
+本程式保證不收集密碼 :pray:  
+帳號密碼是用來向`https://www.dcard.tw/api/member/login`發送登入請求，絕無其他用途。
+
+程式碼完全公開  
+https://github.com/lockys/dcard-card/blob/master/lib/login.js#L2
 
 # Build
 
@@ -30,6 +40,9 @@ $ npm install
 ```sh
 $ npm start
 ```
+
+# Contribution
+Any PR and complain are welcome!
 
 # Built with
 
