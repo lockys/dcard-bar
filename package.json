@@ -20,8 +20,8 @@
   "main": "main.js",
   "scripts": {
     "build": "electron-packager . dcard --platform=darwin --arch=x64 --version=0.34.2 --overwrite --icon=Icon.icns",
-    "build-win": "electron-packager . dcard --platform=win32 --arch=x64 --version=0.34.2 --overwrite --icon=Icon.ico",
-    "build-win-32": "electron-packager . dcard --platform=win32 --arch=ia32 --version=0.34.2 --overwrite --icon=Icon.ico",
+    "build-win": "electron-packager . dcard --platform=win32 --arch=x64 --version=0.34.2 --overwrite --icon=Icon.ico --version-string.ProductName=dcard-bar",
+    "build-win-32": "electron-packager . dcard --platform=win32 --arch=ia32 --version=0.34.2 --overwrite --icon=Icon.ico --version-string.ProductName=dcard-bar",
     "start": "electron ."
   },
   "author": "Calvin Jeng <locky4567@gmail.com> (https://github.com/lockys)",
