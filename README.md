@@ -15,7 +15,7 @@ A menubar helps you check what card of Dcard you get today!
 [For OS X](https://github.com/lockys/dcard-bar/releases/download/0.0.2/dcard-card-bar.zip)
 
 **已知問題**  
-- PC-cillin 會檔
+- PC-cillin 會擋
 - 點多下 icon 會開啟多次
 
 # 聲明
